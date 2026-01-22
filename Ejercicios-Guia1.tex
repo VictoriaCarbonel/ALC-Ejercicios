@@ -25,10 +25,62 @@
 1 & -1 & 1 & 2 & 2
 \end{array}
 \right)
-\longrightarrow
+\xrightarrow[\substack{F_3 - F_1}]{F_2 - 3F_1}
 \]
 
+\[
+\left(
+\begin{array}{cccc|c}
+1 & 1 & -2 & 1 & -2 \\
+0 & -5 & 7 & 2 & 9\\
+0 & -2 & 3 & 1 & 4
+\end{array}
+\right)
+\xrightarrow[\substack{5F_3 - 2F_2}]{}
+\]
+
+\[
+\left(
+\begin{array}{cccc|c}
+1 & 1 & -2 & 1 & -2 \\
+0 & -5 & 7 & 2 & 9\\
+0 & 0 & 1 & 1 & 2
+\end{array}
+\right)
+\]
+
+Ahora, despejamos las variables comenzando desde la última fila hacia la primera:
+\begin{align*}
+x_3 + x_4 &= 2 \quad \Rightarrow \quad x_3 = 2 - x_4 \\
+-5x_2 + 7(2 - x_4) + 2x_4 &= 9 \quad \Rightarrow \quad -5x_2 + 14 - 7x_4 + 2x_4 = 9 \\
+-5x_2 - 5x_4 &= -5 \quad \Rightarrow    \quad x_2 + x_4 = 1 \quad \Rightarrow \quad x_2 = 1 - x_4 \\
+x_1 + (1 - x_4) - 2(2 - x_4) + x_4 &= -2 \\
+x_1 + 1 - x_4 - 4 + 2x_4 + x_4 &= -2 \\
+x_1 - 3 + 2x_4 &= -2 \quad \Rightarrow \quad x_1 = -2x_4 + 1
+\end{align*}
 
 
+Por lo tanto, la solución general del sistema es:\[
+\begin{pmatrix}
+-2x_4 + 1 \\
+1 - x_4 \\
+2 - x_4 \\
+x_4 \\  
+\end{pmatrix}   =
+\begin{pmatrix}      
+1 \\
+1 \\ 
+2 \\
+0 \\        
+\end{pmatrix} + x_4
+\begin{pmatrix} 
+-2 \\
+-1 \\   
+-1 \\
+1 \\    
+\end{pmatrix}, \quad x_4 \in \mathbb{R}
+\]  
+
+\subsection*{b)}
 
 \end{document}
