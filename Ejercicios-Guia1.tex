@@ -2,6 +2,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath} % Esencial para matrices y símbolos matemáticos
 \usepackage{amsfonts} % Para el símbolo de números Reales
+\usepackage{geometry} % Para ajustar los márgenes
+\geometry{a4paper, margin=2cm} % Reduce los márgenes para más espacio
 
 \title{Ejercicios Guía 1 - ALC}
 \author{Vic}
@@ -117,6 +119,84 @@ x_4 \\
 
 La última fila indica que el sistema es incompatible, ya que $0 = -1$ es una contradicción. Por lo tanto, el sistema no tiene solución.
 Es un \textbf{sistema incompatible}.
+
+
+\subsection*{c)}
+
+\[
+\left(
+\begin{array}{ccc|c}
+i & -(1+i) & 0 & -1\\
+1 & -2 & 1 & 0\\
+1 & 2i & -1 & 2i
+\end{array}
+\right)
+\xrightarrow[\substack{iF_3 - F_1}]{iF_2 - F_1}
+\] 
+
+\[
+\left(
+\begin{array}{ccc|c}
+i & -(1+i) & 0 & -1\\
+0 & 1 - i & i & -1\\
+0 & i - 1 & -i & -1
+\end{array}
+\right)
+\xrightarrow[\substack{F_3 - F_2}]{}
+\] 
+
+\[
+\left(
+\begin{array}{ccc|c}
+i & -(1+i) & 0 & -1\\
+0 & 1 - i & i & -1\\
+0 & 0 & -2i & 0
+\end{array}
+\right)
+\] 
+
+Ahora, despejamos las variables comenzando desde la última fila hacia la primera:
+\begin{align*}
+-2ix_3 &= 0 \quad \Rightarrow \quad x_3 = 0 \\
+(1 - i)x_2 + ix_3 &= -1 \quad \Rightarrow \quad (1 - i)x_2 = -1 \quad \Rightarrow \\
+\quad x_2 = \frac{-1}{1 - i} = \frac{-1(1 + i)}{(1 - i)(1 + i)} = \frac{-1 - i}{2} = -\frac{1}{2} - \frac{i}{2} \\        
+ix_1 - (1 + i)x_2 &= -1 \quad \Rightarrow 
+\quad ix_1 - (1 + i)\left(-\frac{1}{2} - \frac{i}{2}\right) = -1 \\
+ix_1 + \frac{1}{2} + \frac{i}{2} + \frac{i}{2} + \frac{1}{2} &= -1 \\
+ix_1 + 1 + i &= -1 \quad \Rightarrow \quad ix_1 = -1 - i - 1 = -2 - i \quad \Rightarrow \quad x_1 = \frac{-2 - i}{i} = \\
+\frac{(-2 - i)(-i)}{i(-i)} = \frac{2i + i^2}{1} = \frac{2i - 1}{1} = -1 + 2i
+\end{align*}
+
+
+Por lo tanto, la solución general del sistema es:\[
+\begin{pmatrix}                         
+-1 + 2i \\
+-\frac{1}{2} - \frac{i}{2} \\   
+0 \\  
+\end{pmatrix}   
+\]          
+
+
+\section*{Ejercicio 2}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
