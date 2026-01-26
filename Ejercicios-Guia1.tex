@@ -527,5 +527,180 @@ x_2
 \end{pmatrix}, \quad x_2 \in \mathbb{R}
 \]
 
+\section*{Ejercicio 5}
+\includegraphics[scale=0.6]{Consignas-imagenes/ejercicio5.png}
+
+\subsection*{a)}
+tengo x+y-z=0 y x-y=0. 
+Esto forma la matriz:
+\[
+\left(
+\begin{array}{ccc|c}    
+1 & 1 & -1 & 0\\
+1 & -1 & 0 & 0\\
+\end{array}
+\right)
+\xrightarrow[\substack{F_2 - F_1}]{triangulo}
+\]
+
+\[
+\left(  
+\begin{array}{ccc|c}
+1 & 1 & -1 & 0\\
+0 & -2 & 1 & 0\\
+\end{array}
+\right)
+\]
+
+Ahora despejo las variables desde abajo hacia arriba:
+\begin{align*}
+-2y + z &= 0 \quad \Rightarrow \quad z = 2y \\
+x + y - (2y) &= 0 \quad \Rightarrow \quad x - y = 0 \quad \Rightarrow \quad x = y
+\end{align*}
+Por lo tanto, la solución general del sistema es:\[
+\begin{pmatrix}
+y \\
+y \\
+2y \\
+\end{pmatrix}   =
+y
+\begin{pmatrix}
+1 \\
+1 \\
+2 \\
+\end{pmatrix}, \quad y \in \mathbb{R}
+\]
+
+Verifico que este vector cumple ambas ecuaciones y, por lo tanto, sea un generador del subespacio:
+\begin{align*}
+x + y - z &= 1 + 1 - 2 = 0 \\
+x - y &= 1 - 1 = 0
+\end{align*}
+Entonces, el vector $\begin{pmatrix} 1 \\ 1 \\ 2 \end{pmatrix}$ es un generador del subespacio.
+
+\subsection*{b)}
+Decir que una matriz $A$ cumple
+\[
+-A^t = A
+\]
+significa que la matriz es \textbf{antisimétrica}.
+
+Como $A^t$ denota la traspuesta de $A$, la igualdad anterior es equivalente a
+\[
+A^t = -A.
+\]
+
+Esto implica las siguientes propiedades:
+
+\begin{itemize}
+    \item Para todo par de índices $i,j$ se cumple:
+    \[
+    a_{ij} = -a_{ji}.
+    \]
+
+    \item Los elementos de la diagonal principal son cero, ya que si $i=j$:
+    \[
+    a_{ii} = -a_{ii} \Rightarrow a_{ii} = 0.
+    \]
+
+    \item La matriz $A$ debe ser cuadrada.
+\end{itemize}
+
+Un ejemplo de matriz antisimétrica es:
+\[
+A =
+\begin{pmatrix}
+0 & 2 & -1 \\
+-2 & 0 & 4 \\
+1 & -4 & 0
+\end{pmatrix}.
+\]
+
+Su traspuesta es:
+\[
+A^t =
+\begin{pmatrix}
+0 & -2 & 1 \\
+2 & 0 & -4 \\
+-1 & 4 & 0
+\end{pmatrix},
+\]
+y se verifica que
+\[
+A^t = -A.
+\]
+
+Volviendo al ejercicio, tengo la siguiente matriz genérica de 3x3:
+\[
+A =
+\begin{pmatrix}
+a_{11} & a_{12} &  a_{13} \\
+a_{21} & a_{22} & a_{23} \\
+a_{31} & a_{32} & a_{33}
+\end{pmatrix},
+\]
+
+La condición "$-A^t = A$" implica que:
+\[
+\begin{pmatrix}
+-a_{11} & -a_{21} & -a_{31} \\
+-a_{12} & -a_{22} & -a_{32} \\
+-a_{13} & -a_{23} & -a_{33}
+\end{pmatrix} =
+\begin{pmatrix}
+a_{11} & a_{12} &  a_{13} \\
+a_{21} & a_{22} & a_{23} \\
+a_{31} & a_{32} & a_{33}
+\end{pmatrix}.
+\]
+Esto me da el siguiente sistema de ecuaciones:
+\begin{align*}
+-a_{11} &= a_{11}=0 \\
+-a_{22} &= a_{22}=0 \\
+-a_{33} &= a_{33}=0 \\
+-a_{21} &= a_{12} \\
+-a_{31} &= a_{13} \\
+-a_{32} &= a_{23}
+\end{align*}
+
+Resolviendo este sistema, obtengo:
+\[
+A =
+\begin{pmatrix}
+0 & a_{12} &  a_{13} \\
+-a_{12} & 0 & a_{23} \\
+-a_{13} & -a_{23} & 0
+\end{pmatrix},
+\]
+donde $a_{12}, a_{13}, a_{23} \in \mathbb{C}$ son parámetros libres.
+Entonces, mis generadores del subespacio son:
+
+\[
+\begin{pmatrix}
+0 & 1 & 0 \\
+-1 & 0 & 0 \\
+0 & 0 & 0
+\end{pmatrix},
+\quad
+\begin{pmatrix}
+0 & 0 & 1 \\
+0 & 0 & 0 \\
+-1 & 0 & 0
+\end{pmatrix},
+\quad
+\begin{pmatrix}
+0 & 0 & 0 \\
+0 & 0 & 1 \\
+0 & -1 & 0
+\end{pmatrix}.
+\]
+
+
+
+
+
+
+
+
 
 \end{document}
