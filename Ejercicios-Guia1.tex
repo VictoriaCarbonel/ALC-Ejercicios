@@ -695,11 +695,60 @@ Entonces, mis generadores del subespacio son:
 \end{pmatrix}.
 \]
 
+\subsection*{c)}
+Es un subespacio de las matrices 3×3 donde la única restricción es que la suma de la diagonal sea cero.
 
 
+Una matriz genérica de 3x3 es:
+\[
+A =
+\begin{pmatrix}
+a_{11} & a_{12} &  a_{13} \\
+a_{21} & a_{22} & a_{23} \\
+a_{31} & a_{32} & a_{33}
+\end{pmatrix},
+\]
+La condición "la suma de la diagonal es cero" implica que:
+\begin{align*}
+a_{11} + a_{22} + a_{33} &= 0 \quad \Rightarrow \quad a_{33} = -a_{11} - a_{22}
+\end{align*}
+Por lo tanto, la matriz queda de la siguiente forma:
+\[
+A =
+\begin{pmatrix}
+a_{11} & a_{12} &  a_{13} \\
+a_{21} & a_{22} & a_{23} \\
+a_{31} & a_{32} & -a_{11} - a_{22}
+\end{pmatrix},
+\]
 
-
-
+donde $a_{11}, a_{12}, a_{13}, a_{21}, a_{22}, a_{23}, a_{31}, a_{32} \in \mathbb{R}$ son parámetros libres.
+Entonces, mis generadores del subespacio son:
+\[
+\begin{pmatrix}
+1 & 0 & 0 \\
+0 & 0 & 0 \\
+0 & 0 & -1
+\end{pmatrix},
+\quad
+E_{12}
+\quad
+E_{13},
+\quad
+E_{21},
+\quad
+\begin{pmatrix}
+0 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & -1
+\end{pmatrix},
+\quad
+E_{23},
+\quad
+E_{31},
+\quad
+E_{32}
+\]
 
 
 
