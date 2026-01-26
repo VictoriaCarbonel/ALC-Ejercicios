@@ -750,6 +750,103 @@ E_{31},
 E_{32}
 \]
 
+\subsection*{d)}
+
+Sea el subespacio de $\mathbb{C}^4$ definido por el siguiente sistema de ecuaciones lineales:
+\[A=
+\left(
+\begin{array}{cccc|c}
+    1&1&0&-i&0\\
+    i&1+i&-1&0&0\\
+\end{array}
+\right)
+\xrightarrow[\substack{F_2 - iF_1}]{}
+\]
+
+\[
+\left(
+\begin{array}{cccc|c}
+    1&1&0&-i&0\\
+    0&1&-1&-1&0\\
+\end{array}
+\right)
+\]
+
+Entonces, despejo las variables desde abajo hacia arriba:
+\begin{align*}
+x_2 - x_3 - x_4 &= 0 \quad \Rightarrow \quad x_2 = x_3 + x_4 \\
+x_1 + (x_3 + x_4) - ix_4 &= 0 \quad \Rightarrow \quad x_1 + x_3 + x_4 - ix_4 = 0 \quad \Rightarrow \quad x_1 = -x_3 - x_4 + ix_4
+\end{align*}
+Por lo tanto, la solución general del sistema es:\[
+\begin{pmatrix}
+    -x_3 - x_4 + ix_4 \\
+    x_3 + x_4 \\
+    x_3 \\
+    x_4 \\
+\end{pmatrix}   =
+x_3
+\begin{pmatrix}
+    -1 \\
+    1 \\
+    1 \\
+    0 \\
+\end{pmatrix} +
+x_4
+\begin{pmatrix}
+    -1 + i \\
+    1 \\
+    0 \\
+    1 \\
+\end{pmatrix}, \quad x_3, x_4 \in \mathbb{C}
+\]
+
+y los generadores del subespacio son:
+\[
+\begin{pmatrix}
+    -1 \\
+    1 \\
+    1 \\
+    0 \\
+\end{pmatrix},
+\quad
+\begin{pmatrix}
+    -1 + i \\
+    1 \\
+    0 \\
+    1 \\
+\end{pmatrix}
+\]
+
+Verificamos:
+\begin{align*}
+x_1 + x_2 - ix_4 &= -1 + 1 + 1 - i(0) = 0 \\
+ix_1 + (1 + i)x_2 - x_3 &= i(-1) + (1 + i)(1) - (1) = -i + 1 + i - 1 = 0
+\end{align*}
+
+y 
+\begin{align*}
+x_1 + x_2 - ix_4 &= (-1 + i) + 1 + 0 - i(1) = -1 + i + 1 - i = 0 \\
+ix_1 + (1 + i)x_2 - x_3 &= i(-1 + i) + (1 + i)(1) - 0 = -i + i^2 + 1 + i = -1 + 1 = 0
+\end{align*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \end{document}
