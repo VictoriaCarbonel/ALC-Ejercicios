@@ -848,7 +848,51 @@ Resolvemos este sistema de ecuaciones. Sumando (2) y (4):
 0 &= 6
 \end{align*}
 Esto es una contradicción, lo que significa que no existen tales escalares $a$, $b$ y $c$. Por lo tanto, el vector (2,1,3,5) no pertenece al subespacio $S$.
+
 \subsection*{b)}
+Para determinar si $\{x \in \mathbb{R}^4 \mid x_1 - x_2 - x_3 = 0\} \subseteq S$ , necesitamos verificar si cualquier vector que satisface la ecuación $x_1 - x_2 - x_3 = 0$ puede ser expresado como una combinación lineal de los vectores generadores de $S$.
+Sea $x = (x_1, x_2, x_3, x_4)$ tal que $x_1 - x_2 - x_3 = 0$. Entonces, podemos expresar $x_1$ en términos de $x_2$ y $x_3$:
+\[x_1 = x_2 + x_3\]
+Queremos encontrar si existen escalares $a$, $b$ y $c$ tales que:
+\[a(1,-1,2,1) + b(3,1,0,-1) + c(1,1,-1,-1) = (x_1, x_2, x_3, x_4)\]
+Esto nos lleva al siguiente sistema de ecuaciones:
+\begin{align*}
+a + 3b + c &= x_1 \quad (1)\\
+-a + b + c &= x_2 \quad (2)\\
+2a + 0b - c &= x_3 \quad (3)\\
+a - b - c &= x_4 \quad (4)
+\end{align*}
+Sustituyendo $x_1$ en (1):
+\begin{align*}
+a + 3b + c &= x_2 + x_3 \quad (1')
+\end{align*}
+Sumando (2) y (4):
+\begin{align*}
+(-a + b + c) + (a - b - c) &= x_2 + x_4 \\
+0 &= x_2 + x_4
+\end{align*}
+Esto implica que $x_4 = -x_2$. Por lo tanto, no todos los vectores que satisfacen $x_1 - x_2 - x_3 = 0$ pueden ser expresados como combinaciones lineales de los vectores generadores de $S$. Por lo tanto, $\{x \in \mathbb{R}^4 \mid x_1 - x_2 - x_3 = 0\} \not\subseteq S$.
+Esto se debe a que  $x_4$ se supone que no tiene ninguna restricción y es libre, lo que se contradice con lo que encontramos.
+
+\subsection*{c)}
+Para determinar si $S \subseteq \{x \in \mathbb{R}^4 \mid x_1 - x_2 - x_3 = 0\} $, necesitamos verificar si cualquier combinación lineal de los vectores generadores de $S$ satisface la ecuación $x_1 - x_2 - x_3 = 0$.
+Sea $x = a(1,-1,2,1) + b(3,1,0,-1) + c(1,1,-1,-1)$ para algunos escalares $a$, $b$ y $c$. Entonces, tenemos:
+\begin{align*}  
+x_1 &= a + 3b + c \\
+x_2 &= -a + b + c \\
+x_3 &= 2a + 0b - c \\
+\end{align*}
+Calculamos $x_1 - x_2 - x_3$:
+\begin{align*}
+x_1 - x_2 - x_3 &= (a + 3b + c) - (-a + b + c) - (2a + 0b - c) \\
+&= a + 3b + c + a - b - c - 2a - 0b + c \\
+&= (a + a - 2a) + (3b - b - 0b) + (c - c + c) \\
+&= 0 + 2b + c
+\end{align*}
+
+Para que $x_1 - x_2 - x_3 = 0$, necesitamos que $2b + c = 0$. Esto significa que no todos los vectores en $S$ satisfacen la ecuación $x_1 - x_2 - x_3 = 0$ a menos que se imponga la restricción adicional de que $c = -2b$.
+Por lo tanto, $S \not\subseteq \{x \in \mathbb{R}^4 \mid x_1 - x_2 - x_3 = 0\}$.
+Si hubiera dado 0 en lugar de $2b + c$ en el cálculo, entonces hubiera sido cierto.
 
 
 
