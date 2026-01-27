@@ -897,6 +897,145 @@ Si hubiera dado 0 en lugar de $2b + c$ en el cálculo, entonces hubiera sido cie
 \includegraphics[scale=0.5]{Consignas-imagenes/Captura de pantalla 2026-01-26 203005.png}
 \includegraphics[scale=0.5]{Consignas-imagenes/Captura de pantalla 2026-01-26 203404.png}
 
+\subsection*{a)}
+Voy a buscar los generadores de $S \cap T$:
+Busco los generadores de S:
+S = \{ (x,y,z): 3x-2y+z=0\} 
+$\rightarrow z=2y-3x$
+\[\begin{pmatrix}
+x \\
+y \\
+2y-3x \\
+\end{pmatrix} =
+x
+\begin{pmatrix}
+1 \\
+0 \\
+-3 \\
+\end{pmatrix} +
+y
+\begin{pmatrix}
+0 \\
+1 \\
+2 \\
+\end{pmatrix}, \quad x,y \in \mathbb{R}
+\]
+Los generadores de S son:
+\[
+\begin{pmatrix}
+1 \\
+0 \\
+-3 \\
+\end{pmatrix},
+\quad
+\begin{pmatrix}
+0 \\
+1 \\
+2 \\
+\end{pmatrix}
+\]
+
+Busco los generadores de T:
+T = \{ (x,y,z): x+z=0\} 
+$\rightarrow z=-x$
+\[\begin{pmatrix}
+x \\
+y \\
+-x \\
+\end{pmatrix} =
+x
+\begin{pmatrix}
+1 \\
+0 \\
+-1 \\
+\end{pmatrix} +
+y
+\begin{pmatrix}
+0 \\
+1 \\
+0 \\
+\end{pmatrix}, \quad x,y \in \mathbb{R}
+\]
+Los generadores de T son:
+\[
+\begin{pmatrix}
+1 \\
+0 \\
+-1 \\
+\end{pmatrix},
+\quad
+\begin{pmatrix}
+0 \\
+1 \\
+0 \\
+\end{pmatrix}
+\]
+Entonces, para encontrar $S \cap T$, busco los vectores que pueden ser expresados como combinaciones lineales de los generadores de S y T:
+\[
+a
+\begin{pmatrix}
+1 \\
+0 \\
+-3 \\
+\end{pmatrix} +
+b
+\begin{pmatrix}
+0 \\
+1 \\
+2 \\
+\end{pmatrix} =
+c
+\begin{pmatrix}
+1 \\
+0 \\
+-1 \\
+\end{pmatrix} +
+d
+\begin{pmatrix}
+0 \\
+1 \\
+0 \\
+\end{pmatrix}
+\]
+Esto nos lleva al siguiente sistema de ecuaciones:
+\begin{align*}
+a &= c \quad (1)\\
+b &= d \quad (2)\\
+-3a + 2b &= -c \quad (3)
+\end{align*}
+Sustituyendo (1) y (2) en (3):
+\begin{align*}
+-3c + 2d &= -c \\
+-2c + 2d &= 0 \\
+-2c &= -2d \\
+c &= d
+\end{align*}
+Por lo tanto, todos dependen de un solo parámetro, llamémoslo $t$:
+$vector =t(1,0,-3)+t(0,1,2)
+=t(1,1,-1)$
+Eso te dice inmediatamente que:
+$S \cap T = \langle(1,1,-1)\rangle$
+
+
+
+\[
+\begin{pmatrix}
+1 \\
+0 \\
+-1 \\
+\end{pmatrix} +
+\begin{pmatrix}
+0 \\
+1 \\
+0 \\
+\end{pmatrix} =
+\begin{pmatrix}
+1 \\
+1 \\
+-1 \\
+\end{pmatrix}
+\]
+
 
 
 
