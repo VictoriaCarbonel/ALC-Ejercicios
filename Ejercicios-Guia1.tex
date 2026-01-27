@@ -1141,10 +1141,154 @@ los generadores de $S+T$ pueden tomarse como:
 \right\}.
 \]
 
+\subsection*{b)}
+Tengo los subespacios:
+\[S = \{(x,y,z) \in \mathbb{R}^3 \mid 3x - 2y + z = 0, x - y = 0\}\]
+\[T = \langle(1,1,0),(5,7,3)\rangle\]
+Primero, encuentro los generadores de S:
+De la ecuación $x - y = 0$, deduzco que $y = x$. Sustituyendo esto en la primera ecuación:
+\[3x - 2x + z = 0 \Rightarrow x + z = 0 \Rightarrow z = -x\]
+Por lo tanto, los vectores en S pueden expresarse como:
+\[\begin{pmatrix}
+x \\
+x \\
+-x \\
+\end{pmatrix} =
+x
+\begin{pmatrix}
+1 \\
+1 \\
+-1 \\
+\end{pmatrix}, \quad x \in \mathbb{R}
+\]
+Entonces, el generador de S es:
+\[
+\begin{pmatrix}
+1 \\
+1 \\
+-1 \\
+\end{pmatrix}
+\]
 
+Ahora, para encontrar $S \cap T$, busco los vectores que pueden ser expresados como combinaciones lineales de los generadores de S y T:
+\[
+a
+\begin{pmatrix}
+1 \\
+1 \\
+-1 \\
+\end{pmatrix} =
+c
+\begin{pmatrix}
+1 \\
+1 \\
+0 \\
+\end{pmatrix} +
+d
+\begin{pmatrix}
+5 \\
+7 \\
+3 \\
+\end{pmatrix}
+\]
+Esto nos lleva al siguiente sistema de ecuaciones:
+\begin{align*}
+a &= c + 5d \quad (1)\\
+a &= c + 7d \quad (2)\\
+-a &= 0 + 3d \quad (3)
+\end{align*}
+Sustituyendo (1) en (2):
+\begin{align*}
+c + 5d &= c + 7d \\
+5d &= 7d \\
+0 &= 2d \\
+d &= 0
+\end{align*}
+Sustituyendo $d = 0$ en (1):
+\begin{align*}
+a &= c + 5(0) \\
+a &= c
+\end{align*}
+Sustituyendo $d = 0$ en (3):
+\begin{align*}
+-a &= 0 + 3(0) \\
+-a &= 0 \\
+a &= 0
+\end{align*}
+Por lo tanto, $a = 0$ y $c = 0$. Esto implica que el único vector en $S \cap T$ es el vector cero.
+Por lo tanto, $S \cap T = \{(0,0,0)\}$.
 
-
-
+Luego busco los generadores de $S + T$:
+Para encontrar $S+T$, combinamos los generadores de $S$ y $T$:
+\[
+a\begin{pmatrix}
+1\\
+1\\
+-1
+\end{pmatrix}
++
+c\begin{pmatrix}
+1\\
+1\\
+0
+\end{pmatrix}
++
+d\begin{pmatrix}
+5\\
+7\\
+3
+\end{pmatrix}.
+\]
+Y verifico que son linealmente independientes:
+\[
+\left(
+\begin{array}{ccc|c}
+1 & 1 & 5 & 0\\
+1 & 1 & 7 & 0\\
+-1 & 0 & 3 & 0
+\end{array}
+\right)
+\xrightarrow[\substack{F_2 - F_1}]{}
+\]
+\[
+\left(
+\begin{array}{ccc|c}
+1 & 1 & 5 & 0\\
+0 & 0 & 2 & 0\\
+-1 & 0 & 3 & 0
+\end{array}
+\right)
+\xrightarrow[\substack{F_3 + F_1}]{}
+\]
+\[
+\left(
+\begin{array}{ccc|c}
+1 & 1 & 5 & 0\\
+0 & 0 & 2 & 0\\
+0 & 1 & 8 & 0
+\end{array}
+\right)
+\]
+Como los tres vectores son linealmente independientes, los generadores de $S+T$ son:
+\[
+\begin{pmatrix}
+1 \\
+1 \\
+-1 \\
+\end{pmatrix},
+\quad
+\begin{pmatrix}
+1 \\
+1 \\
+0 \\
+\end{pmatrix},
+\quad
+\begin{pmatrix}
+5 \\
+7 \\
+3 \\
+\end{pmatrix}
+\]
 
 
 
