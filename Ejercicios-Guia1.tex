@@ -1015,27 +1015,131 @@ $vector =t(1,0,-3)+t(0,1,2)
 =t(1,1,-1)$
 Eso te dice inmediatamente que:
 $S \cap T = \langle(1,1,-1)\rangle$
-
-
-
+\\
+\\
+Voy a buscar los generadores de $S + T$:
+Para encontrar $S+T$, combinamos los generadores de $S$ y $T$:
 \[
-\begin{pmatrix}
-1 \\
-0 \\
--1 \\
-\end{pmatrix} +
-\begin{pmatrix}
-0 \\
-1 \\
-0 \\
-\end{pmatrix} =
-\begin{pmatrix}
-1 \\
-1 \\
--1 \\
+a\begin{pmatrix}
+1\\
+0\\
+-3
 \end{pmatrix}
++
+b\begin{pmatrix}
+0\\
+1\\
+2
+\end{pmatrix}
++
+c\begin{pmatrix}
+1\\
+0\\
+-1
+\end{pmatrix}
++
+d\begin{pmatrix}
+0\\
+1\\
+0
+\end{pmatrix}.
 \]
 
+Esto nos lleva al siguiente sistema de ecuaciones:
+\[
+\begin{cases}
+x_1 = a + c, \\
+x_2 = b + d, \\
+x_3 = -3a + 2b - c.
+\end{cases}
+\]
+
+Entonces, la solución general es:
+\[
+\begin{pmatrix}
+x_1\\
+x_2\\
+x_3
+\end{pmatrix}
+=
+\begin{pmatrix}
+a+c\\
+b+d\\
+-3a+2b-c
+\end{pmatrix}
+=
+a\begin{pmatrix}
+1\\
+0\\
+-3
+\end{pmatrix}
++
+b\begin{pmatrix}
+0\\
+1\\
+2
+\end{pmatrix}
++
+c\begin{pmatrix}
+1\\
+0\\
+-1
+\end{pmatrix}
++
+d\begin{pmatrix}
+0\\
+1\\
+0
+\end{pmatrix},
+\quad a,b,c,d\in\mathbb{R}.
+\]
+
+Como
+\[
+\begin{pmatrix}
+0\\
+1\\
+2
+\end{pmatrix}
+=
+-\begin{pmatrix}
+1\\
+0\\
+-3
+\end{pmatrix}
++
+\begin{pmatrix}
+1\\
+0\\
+-1
+\end{pmatrix}
++
+\begin{pmatrix}
+0\\
+1\\
+0
+\end{pmatrix},
+\]
+los generadores de $S+T$ pueden tomarse como:
+\[
+\left\{
+\begin{pmatrix}
+1\\
+0\\
+-3
+\end{pmatrix},
+\begin{pmatrix}
+0\\
+1\\
+0
+\end{pmatrix},
+\begin{pmatrix}
+1\\
+0\\
+-1
+\end{pmatrix}
+\right\}.
+\]
 
 
 
