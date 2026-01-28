@@ -1440,6 +1440,24 @@ Por lo tanto, el valor de \(k\) que satisface la condición \(S \cap T = \langle
 \forall k \in \mathbb{R}, k \neq -2 \text{ y } k \neq 1
 \]
 
+\section*{Ejercicio 9}
+Sean S y T subespacios de un espacio vectorial V. Demostrar que:
+$S\cup T$ es un subespacio de V si y sólo si $S \subseteq T$ o $T \subseteq S$.
+\\
+\\
+\begin{proof}
+($\Rightarrow$) Supongamos que $S \cup T$ es un subespacio de V. Para demostrar que $S \subseteq T$ o $T \subseteq S$, consideremos dos casos:
+\begin{itemize}
+    \item Si $S \subseteq T$, entonces la afirmación es verdadera.
+    \item Si $T \subseteq S$, entonces la afirmación también es verdadera.
+    \item Si ni $S \subseteq T$ ni $T \subseteq S$, entonces existen elementos $s \in S$ y $t \in T$ tales que $s \notin T$ y $t \notin S$. \\
+    Consideremos el vector $s + t$. Dado que $S \cup T$ es un subespacio, $s + t$ debe pertenecer a $S \cup T$. Sin embargo, si $s + t \in S$, entonces $t = (s + t) - s$ también pertenecería a $S$, lo cual es una contradicción. \\
+    De manera similar, si $s + t \in T$, entonces $s = (s + t) - t$ también pertenecería a $T$, lo cual también es una contradicción. Por lo tanto, este caso no puede ocurrir.
+\end{itemize}
+Por lo tanto, si $S \cup T$ es un subespacio, entonces $S \subseteq T$ o $T \subseteq S$.
+
+($\Leftarrow$) Supongamos que $S \subseteq T$. Entonces, $S \cup T = T$, que es un subespacio de V. De manera similar, si $T \subseteq S$, entonces $S \cup T = S$, que también es un subespacio de V. Por lo tanto, en ambos casos, $S \cup T$ es un subespacio de V.
+\end{proof}
 
 
 
