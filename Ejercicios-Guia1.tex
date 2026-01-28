@@ -1633,11 +1633,32 @@ Las filas no nulas de la matriz escalonada forman una base de S:
 \right\}.
 \]
 
+\section*{Ejercicio 12}
+Sean $v_1,...,v_k$ $\epsilon \mathbb{R}^n$, probar que $\{v_1,..,v_k\}$ es linealmente independiente sobre $\mathbb{R}$ 
+si y solo si $\{v_1,...,v_k\}$ es linealmente independiente sobre $\mathbb{C}$.  
 
+\begin{proof}
+($\Rightarrow$) Supongamos que $\{v_1, ..., v_k\}$ es linealmente independiente sobre $\mathbb{R}$. Esto significa que la única solución a la ecuación:
+\[a_1 v_1 + a_2 v_2 + ... + a_k v_k = 0\]
+donde $a_1, a_2, ..., a_k \in \mathbb{R}$, es la solución trivial $a_1 = a_2 = ... = a_k = 0$.
+Ahora, consideremos la misma ecuación pero con coeficientes en $\mathbb{C}$:
+\[b_1 v_1 + b_2 v_2 + ... + b_k v_k = 0\]
+donde $b_1, b_2, ..., b_k \in \mathbb{C}$. Si esta ecuación tiene una solución no trivial, entonces al separar las partes reales e imaginarias de los coeficientes $b_i$, podemos escribir:
+\[ (c_1 + id_1)v_1 + (c_2 + id_2)v_2 + ... + (c_k + id_k)v_k = 0\]
+donde $c_i, d_i \in \mathbb{R}$. Esto implica que:
+\[ c_1 v_1 + c_2 v_2 + ... + c_k v_k + i(d_1 v_1 + d_2 v_2 + ... + d_k v_k) = 0\]
+Separando las partes reales e imaginarias, obtenemos dos ecuaciones:
+\[ c_1 v_1 + c_2 v_2 + ... + c_k v_k = 0 \quad (1) \]
+\[ d_1 v_1 + d_2 v_2 + ... + d_k v_k = 0 \quad (2) \]
+Dado que $\{v_1, ..., v_k\}$ es linealmente independiente
+sobre $\mathbb{R}$, las únicas soluciones a (1) y (2) son $c_1 = c_2 = ... = c_k = 0$ y $d_1 = d_2 = ... = d_k = 0$. Por lo tanto, $b_1 = b_2 = ... = b_k = 0$, lo que demuestra que $\{v_1, ..., v_k\}$ es linealmente independiente sobre $\mathbb{C}$.
 
-
-
-
+($\Leftarrow$) Supongamos que $\{v_1, ..., v_k\}$ es linealmente independiente sobre $\mathbb{C}$. Esto significa que la única solución a la ecuación:  
+\[b_1 v_1 + b_2 v_2 + ... + b_k v_k = 0\]
+donde $b_1, b_2, ..., b_k \in \mathbb{C}$, es la solución trivial $b_1 = b_2 = ... = b_k = 0$. Ahora, consideremos la misma ecuación pero con coeficientes en $\mathbb{R}$:
+\[a_1 v_1 + a_2 v_2 + ... + a_k v_k = 0\]
+donde $a_1, a_2, ..., a_k \in \mathbb{R}$. Dado que $\mathbb{R} \subseteq \mathbb{C}$, cualquier solución a esta ecuación también es una solución a la ecuación con coeficientes en $\mathbb{C}$. Por lo tanto, si existe una solución no trivial a la ecuación con coeficientes en $\mathbb{R}$, entonces también existiría una solución no trivial a la ecuación con coeficientes en $\mathbb{C}$, lo cual contradice nuestra suposición de que $\{v_1, ..., v_k\}$ es linealmente independiente sobre $\mathbb{C}$. Por lo tanto, la única solución a la ecuación con coeficientes en $\mathbb{R}$ es la solución trivial $a_1 = a_2 = ... = a_k = 0$, lo que demuestra que $\{v_1, ..., v_k\}$ es linealmente independiente sobre $\mathbb{R}$.
+\end{proof} 
 
 
 
