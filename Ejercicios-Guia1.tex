@@ -1378,8 +1378,67 @@ Por lo tanto, el valor de \(k\) que satisface la igualdad \(U = W\) es:
 k = -2.
 \]
 
+\subsection*{b)}
 
+Teniendo que $S \cap T$ = $\langle (0,1,1) \rangle$, siendo S=$\{ x \epsilon  \mathbb{R} : x_1 + x_2 - x_3 = 0\}$ y T= $\langle (1,k,2),(-1,2,k) \rangle$ 
+Entonces voy a buscar el valor de K para que $(0,1,1) \epsilon T$ y que además satisfaga la ecuación de S.
+Primero verifico que $(0,1,1)$ satisface la ecuación de S
+\begin{align*}
+x_1 + x_2 - x_3 &= 0 \\
+0 + 1 - 1 &= 0 \\
+0 &= 0
+\end{align*}
+Ahora, busco si existen escalares a y b tales que:
+\[a(1,k,2) + b(-1,2,k) = (0,1,1)\]
+Esto nos lleva al siguiente sistema de ecuaciones:
+\begin{align*}
+a - b &= 0 \quad (1)\\
+ak + 2b &= 1 \quad (2)\\
+2a + bk &= 1 \quad (3)
+\end{align*}
+Sustituyendo (1) en (2) y (3):
+\begin{align*}
+ak + 2a &= 1 \quad (2')\\
+2a + a k &= 1 \quad (3')
+\end{align*}
+Ambas ecuaciones (2') y (3') son idénticas, por lo que podemos resolver cualquiera de ellas. Tomemos (2'):
+\begin{align*}
+a(k + 2) &= 1 \\
+a &= \frac{1}{k + 2}
+\end{align*}
 
+$\rightarrow k\neq -2$ para que a esté definido.
+
+Sustituyendo el valor de a en (1):
+\begin{align*}
+\frac{1}{k + 2} - b &= 0 \\
+b &= \frac{1}{k + 2}
+\end{align*}
+Ahora, sustituimos los valores de a y b en (3) para encontrar k:
+\begin{align*}
+2\left(\frac{1}{k + 2}\right) + \left(\frac{1}{k + 2}\right)k &= 1 \\
+\frac{2 + k}{k + 2} &= 1 \\
+2 + k &= k + 2 \\
+0 &= 0
+\end{align*}
+
+Además, hay que verificar que no ocurra que $T \subseteq S$, por lo que verifico si los generadores de T cumplen la ecuación de S:
+Para el primer generador $(1,k,2)$:
+\begin{align*}
+1 + k - 2 &= 0 \\
+k - 1 &= 0 \\
+k &= 1
+\end{align*}
+Para el segundo generador $(-1,2,k)$:
+\begin{align*}
+-1 + 2 - k &= 0 \\
+1 - k &= 0 \\
+k &= 1
+\end{align*}
+Por lo tanto, el valor de \(k\) que satisface la condición \(S \cap T = \langle (0,1,1) \rangle\) es:
+\[
+\forall k \in \mathbb{R}, k \neq -2 \text{ y } k \neq 1
+\]
 
 
 
