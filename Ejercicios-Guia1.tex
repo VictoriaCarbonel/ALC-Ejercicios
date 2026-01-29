@@ -1688,11 +1688,84 @@ Para demostrar que $S_2$ es un subespacio de $\mathbb{R}^{n\times n}$, debemos v
 \end{itemize}   
 \end{proof}
 
+\section*{Ejercicio 18}
+Calcular el determinante de $A$ en cada uno de los siguientes casos:
+\subsection*{a)}
+\[A = \begin{pmatrix}
+1 & 0 & 0 & 2 \\
+0 & -2 & 3 & -1 \\
+-1 & 0 & 1 & 4 \\
+0 & 1 & -2 & 0 \\
+\end{pmatrix}\]
+Dado que la matriz \(A\) es una matriz \(4 \times 4\) (cuatro filas y cuatro columnas), es una matriz cuadrada. Por lo tanto, podemos calcular el determinante de \(A\).
+Calculamos el determinante de \(A\) utilizando la regla de Sarrus o la expansión por cofactores. Aquí, utilizaremos la expansión por cofactores a lo largo de la primera fila:
+\[  \text{det}(A) = 1 \cdot \text{det}\begin{pmatrix}
+-2 & 3 & -1 \\
+0 & 1 & 4 \\
+1 & -2 & 0 \\
+\end{pmatrix} - 0 + 0 + 2 \cdot \text{det}\begin{pmatrix}
+0 & -2 & 3 \\
+-1 & 0 & 1 \\
+0 & 1 & -2 \\
+\end{pmatrix} \]
+Calculamos los determinantes de las matrices \(3 \times 3\):
+\[
+\text{det}\begin{pmatrix}
+-2 & 3 & -1 \\
+0 & 1 & 4 \\
+1 & -2 & 0 \\
+\end{pmatrix} = -2(1 \cdot 0 - 4 \cdot -2) - 3(0 \cdot 0 - 4 \cdot 1) + (-1)(0 \cdot -2 - 1 \cdot 1) = -2(8) - 3(-4) + (-1)(-1) = -16 + 12 + 1 = -3
+\]
+\[
+\text{det}\begin{pmatrix}
+0 & -2 & 3 \\
+-1 & 0 & 1 \\
+0 & 1 & -2 \\
+\end{pmatrix} = 0(0 \cdot -2 - 1 \cdot 1) - (-2)(-1 \cdot -2 - 1 \cdot 0) + 3(-1 \cdot 1 - 0 \cdot 0) = 0 - (-2)(2) + 3(-1) = 0 - 4 - 3 = -7
+\]
+Sustituyendo estos valores en la expresión original:
+\[
+\text{det}(A) = 1 \cdot (-3) + 2 \cdot (-7) = -3 - 14 = -17
+\]
+Por lo tanto, el determinante de la matriz \(A\) es \(-17\).
 
-
-
-
-
+\subsection*{b)}
+\[B = \begin{pmatrix}
+i & 0 & 2+i \\
+-1 & 1-i & 0 \\
+2 & 0 & -1 \\   
+\end{pmatrix}\]
+Calculamos el determinante de \(B\) utilizando la regla de Sarrus o la expansión por cofactores. Aquí, utilizaremos la expansión por cofactores a lo largo de la primera fila:
+\[  \text{det}(B) = i \cdot \text{det}\begin{pmatrix}
+1-i & 0 \\  
+0 & -1 \\
+\end{pmatrix} - 0 + (2+i) \cdot \text{det}\begin{pmatrix}
+-1 & 1-i \\
+2 & 0 \\
+\end{pmatrix} \]
+Calculamos los determinantes de las matrices \(2 \times 2\):
+\[
+\text{det}\begin{pmatrix}
+1-i & 0 \\
+0 & -1 \\
+\end{pmatrix} = (1-i)(-1) - 0 = -1 + i
+\]
+\[
+\text{det}\begin{pmatrix}
+-1 & 1-i \\
+2 & 0 \\
+\end{pmatrix} = (-1)(0) - (1-i)(2) = -2 + 2i
+\]
+Sustituyendo estos valores en la expresión original:
+\[
+\text{det}(B) = i(-1 + i) + (2+i)(-2 + 2i)
+\]
+Calculamos cada término:
+\[i(-1 + i) = -i + i^2 = -i - 1\]
+\[(2+i)(-2 + 2i) = -4 + 4i - 2i + 2i^2 = -4 + 2i - 2 = -6 + 2i\]
+Sumando ambos resultados:   
+\[\text{det}(B) = (-i - 1) + (-6 + 2i) = -7 + i\]
+Por lo tanto, el determinante de la matriz \(B\) es \(-7 + i\).
 
 
 
