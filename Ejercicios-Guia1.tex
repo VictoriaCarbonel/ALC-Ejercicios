@@ -1647,7 +1647,7 @@ donde $b_1, b_2, ..., b_k \in \mathbb{C}$. Si esta ecuación tiene una solución
 \[ (c_1 + id_1)v_1 + (c_2 + id_2)v_2 + ... + (c_k + id_k)v_k = 0\]
 donde $c_i, d_i \in \mathbb{R}$. Esto implica que:
 \[ c_1 v_1 + c_2 v_2 + ... + c_k v_k + i(d_1 v_1 + d_2 v_2 + ... + d_k v_k) = 0\]
-Separando las partes reales e imaginarias, obtenemos dos ecuaciones:
+Separando las partes reales e imaginarias, obtenemos dos ecuaciones que deben anularse por separado:
 \[ c_1 v_1 + c_2 v_2 + ... + c_k v_k = 0 \quad (1) \]
 \[ d_1 v_1 + d_2 v_2 + ... + d_k v_k = 0 \quad (2) \]
 Dado que $\{v_1, ..., v_k\}$ es linealmente independiente
@@ -1660,8 +1660,33 @@ donde $b_1, b_2, ..., b_k \in \mathbb{C}$, es la solución trivial $b_1 = b_2 = 
 donde $a_1, a_2, ..., a_k \in \mathbb{R}$. Dado que $\mathbb{R} \subseteq \mathbb{C}$, cualquier solución a esta ecuación también es una solución a la ecuación con coeficientes en $\mathbb{C}$. Por lo tanto, si existe una solución no trivial a la ecuación con coeficientes en $\mathbb{R}$, entonces también existiría una solución no trivial a la ecuación con coeficientes en $\mathbb{C}$, lo cual contradice nuestra suposición de que $\{v_1, ..., v_k\}$ es linealmente independiente sobre $\mathbb{C}$. Por lo tanto, la única solución a la ecuación con coeficientes en $\mathbb{R}$ es la solución trivial $a_1 = a_2 = ... = a_k = 0$, lo que demuestra que $\{v_1, ..., v_k\}$ es linealmente independiente sobre $\mathbb{R}$.
 \end{proof} 
 
+\section*{Ejercicio 13}
+\section*{Ejercicio 14}
+\section*{Ejercicio 15}
+\section*{Ejercicio 16}
+\section*{Ejercicio 17}
+Decidir cuáles de los siguientes subconjuntos son subespacios de $\mathbb{R}^{nxn}$ como $\mathbb{R}$-espacio vectorial:
+\subsection*{a)} $S_1=\{A \in \mathbb{R}^{n\times n} : A \text{ es triangular superior}\}$
+\begin{proof}
+Para demostrar que $S_1$ es un subespacio de $\mathbb{R}^{n\times n}$, debemos verificar que cumple con las tres propiedades de un subespacio vectorial:
+\begin{itemize}
+    \item \textbf{Cerrado bajo la suma:} Sea $A, B \in S_1$. Entonces, $A$ y $B$ son matrices triangulares superiores. La suma de dos matrices triangulares superiores también es una matriz triangular superior. Por lo tanto, $A + B \in S_1$.
+    \item \textbf{Cerrado bajo la multiplicación por un escalar:} Sea $A \in S_1$ y $c \in \mathbb{R}$. Entonces, $A$ es una matriz triangular superior. La multiplicación de una matriz triangular superior por un escalar también resulta en una matriz triangular superior. Por lo tanto, $cA \in S_1$.
+    \item \textbf{Contiene el vector cero:} La matriz cero es una matriz triangular superior, ya que todos sus elementos son cero. Por lo tanto, la matriz cero pertenece a $S_1$.  
+    \item \textbf{Conclusión:} Dado que $S_1$ cumple con las tres propiedades de un subespacio vectorial, concluimos que $S_1$ es un subespacio de $\mathbb{R}^{n\times n}$.
+\end{itemize}
+\end{proof}
 
-
+\subsection*{b)} $S_2=\{A \in \mathbb{R}^{n\times n} : A \text{ es simétrica}\}$
+\begin{proof}
+Para demostrar que $S_2$ es un subespacio de $\mathbb{R}^{n\times n}$, debemos verificar que cumple con las tres propiedades de un subespacio vectorial:
+\begin{itemize}
+    \item \textbf{Cerrado bajo la suma:} Sea $A, B \in S_2$. Entonces, $A$ y $B$ son matrices simétricas. La suma de dos matrices simétricas también es una matriz simétrica. Por lo tanto, $A + B \in S_2$.
+    \item \textbf{Cerrado bajo la multiplicación por un escalar:} Sea $A \in S_2$ y $c \in \mathbb{R}$. Entonces, $A$ es una matriz simétrica. La multiplicación de una matriz simétrica por un escalar también resulta en una matriz simétrica. Por lo tanto, $cA \in S_2$.
+    \item \textbf{Contiene el vector cero:} La matriz cero es una matriz simétrica, ya que todos sus elementos son cero. Por lo tanto, la matriz cero pertenece a $S_2$.  
+    \item \textbf{Conclusión:} Dado que $S_2$ cumple con las tres propiedades de un subespacio vectorial, concluimos que $S_2$ es un subespacio de $\mathbb{R}^{n\times n}$.
+\end{itemize}   
+\end{proof}
 
 
 
